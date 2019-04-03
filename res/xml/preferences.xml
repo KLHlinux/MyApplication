@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout="@layout/preference_item"
+    android:title="设置">
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category_widget"
+        android:title="预留设置分级标题">
+        <CheckBoxPreference
+            android:title="CheckBox标题"
+            android:summary="CheckBox设置具体内容"
+            android:layout="@layout/preference_item"/>
+
+        <CheckBoxPreference
+            android:title="标题"
+            android:summary="设置具体内容"
+            android:layout="@layout/preference_item"
+            android:widgetLayout="@layout/switch_layout"/>
+
+        <Preference
+            android:layout="@layout/preference_item"
+            android:title="预留设置项标题"
+            android:summary="预留设置具体内容要比标题长点"/>
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category_widget"
+        android:title="更多">
+        <Preference
+            android:key="version"
+            android:title="版本"
+            android:summary="V1.0"
+            android:layout="@layout/preference_item"/>
+
+        <Preference
+            android:title="关于"
+            android:summary="About the appliacation"
+            android:layout="@layout/preference_item"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

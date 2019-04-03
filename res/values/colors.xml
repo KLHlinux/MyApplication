@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bright_red">#ff00</color> 
+    <color name="bright_gray">#c0c0c0</color> 
+</resources>

@@ -1,0 +1,131 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.example.myapplication"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:orientation="vertical"
+        android:background="#00CC00" >
+    </LinearLayout>
+
+    <com.example.myapplication.mytoolbar.MyToolbar
+        android:id="@+id/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:background="#00CC00" >
+
+        <ImageView
+            android:id="@+id/iv_scan"
+            android:layout_width="190dp"
+            android:layout_height="185dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shanxing3"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="11dp"
+            android:background="@drawable/circular" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/circular3" />
+
+        <ImageView
+            android:layout_width="0.5dp"
+            android:layout_height="180dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="11dp"
+            android:background="@drawable/circular2" />
+
+        <ImageView
+            android:layout_width="180dp"
+            android:layout_height="0.1sp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="105dp"
+            android:background="@drawable/circular2" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="75dp"
+            android:background="@drawable/hudun" />
+
+        <TextView
+            android:id="@+id/tv_lastTime"
+           	android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="200dp"
+            android:gravity="center"
+            android:text="上次杀毒时间：" />
+
+        <Button
+            android:id="@+id/bt_scan"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="250dp"
+            android:background="@drawable/check_border"
+            android:onClick="scan"
+            android:text="快速扫描"
+            android:textColor="#FFF" />
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:orientation="vertical" >
+        <!-- ScrollView只能有一个直接子节点 -->
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!-- 将所有的TextView都包裹在内部(将TextView从 头部做插入),以满足scrollView有一个子节点 -->
+		    <LinearLayout
+		        android:id="@+id/ll_add_text"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical">
+		        
+		    </LinearLayout>
+            
+        </ScrollView>
+        
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_process"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@drawable/check_border1"
+        android:text="取 消 扫 描" 
+        android:textColor="#000"
+        android:visibility="invisible"
+        android:onClick="finish"/>
+
+</LinearLayout>
